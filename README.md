@@ -1,6 +1,6 @@
-![](http://ccss.lab.sugimototatsuo.com/2015/images/ccss2015logo.png)
-
 # ccss15
+
+![](http://ccss.lab.sugimototatsuo.com/2015/images/ccss2015logo.png)
 
 このリポジトリは、Creative Coding School in Sapporo 2015のワークショップ内で使用するopenFrameworksのサンプルプログラムです。
 
