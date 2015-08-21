@@ -2,11 +2,11 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="FFTExample" />
+		<Option title="ParticleExample" />
 		<Option makefile="makefile" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="addons\;src\;addons\ofxFft\src\;addons\ofxFft\libs\fftw\include\;addons\ofxFft\libs\kiss\;" />
+		<Option virtualFolders="addons\;src\;addons\ofxGui\src\;" />
 		<Build>
 			<Target title="release">
 				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
@@ -68,9 +68,8 @@
 			<Add directory="../../../libs/poco/include" />
 			<Add directory="../../../libs/tess2/include" />
 			<Add directory="../../../libs/cairo/include/cairo" />
-			<Add directory="../../../addons/ofxFft/src" />
-			<Add directory="../../../addons/ofxFft/libs/kiss" />
-			<Add directory="../../../addons/ofxFft/libs/fftw/include" />
+			<Add directory="../../../addons/ofxGui/libs" />
+			<Add directory="../../../addons/ofxGui/src" />
 		</Compiler>
 		<Linker>
 			<Add library="..\..\..\libs\FreeImage\lib\win_cb\FreeImage.lib" />
@@ -112,65 +111,71 @@
 			<Add library="ws2_32" />
 			<Add library="Iphlpapi" />
 			<Add library="Comdlg32" />
-			<Add library="..\..\..\addons\ofxFft\libs\fftw\lib\win32\libfftw3f-3.dll" />
 		</Linker>
 		<ExtraCommands>
 			<Add after='xcopy /e /i /y &quot;$(PROJECT_DIR)..\..\..\export\win_cb\*.dll&quot;  &quot;$(PROJECT_DIR)bin&quot;' />
 			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
 			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="../../../addons/ofxFft/libs/fftw/include/fftw3.h">
-			<Option virtualFolder="addons/ofxFft/libs/fftw/include" />
+		<Unit filename="../../../addons/ofxGui/src/ofxBaseGui.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/libs/kiss/_kiss_fft_guts.h">
-			<Option virtualFolder="addons/ofxFft/libs/kiss" />
+		<Unit filename="../../../addons/ofxGui/src/ofxBaseGui.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/libs/kiss/kiss_fft.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="addons/ofxFft/libs/kiss" />
+		<Unit filename="../../../addons/ofxGui/src/ofxButton.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/libs/kiss/kiss_fft.h">
-			<Option virtualFolder="addons/ofxFft/libs/kiss" />
+		<Unit filename="../../../addons/ofxGui/src/ofxButton.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/libs/kiss/kiss_fftr.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="addons/ofxFft/libs/kiss" />
+		<Unit filename="../../../addons/ofxGui/src/ofxGui.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/libs/kiss/kiss_fftr.h">
-			<Option virtualFolder="addons/ofxFft/libs/kiss" />
+		<Unit filename="../../../addons/ofxGui/src/ofxGuiGroup.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxEasyFft.cpp">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxGuiGroup.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxEasyFft.h">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxLabel.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxFft.cpp">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxLabel.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxFft.h">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxPanel.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxFftBasic.cpp">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxPanel.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxFftBasic.h">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxSlider.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxFftw.cpp">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxSlider.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxFftw.h">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxSliderGroup.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxProcessFFT.cpp">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxSliderGroup.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
-		<Unit filename="../../../addons/ofxFft/src/ofxProcessFFT.h">
-			<Option virtualFolder="addons/ofxFft/src" />
+		<Unit filename="../../../addons/ofxGui/src/ofxToggle.cpp">
+			<Option virtualFolder="addons/ofxGui/src" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxToggle.h">
+			<Option virtualFolder="addons/ofxGui/src" />
 		</Unit>
 		<Unit filename="icon.rc">
 			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/ParticleVec2.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/ParticleVec2.h">
+			<Option virtualFolder="src/" />
 		</Unit>
 		<Unit filename="src/main.cpp">
 			<Option virtualFolder="src" />
