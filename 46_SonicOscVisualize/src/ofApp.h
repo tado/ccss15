@@ -23,6 +23,6 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
-    float getValueFromKey(string msg, string key, int digit);
+    float getValueFromKey(string msg, string key);
     ofxOscReceiver receiver;
 };

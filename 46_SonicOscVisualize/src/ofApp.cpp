@@ -20,7 +20,7 @@ void ofApp::draw(){
     // 画面をフェード
     ofSetRectMode(OF_RECTMODE_CORNER);
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    ofSetColor(0, 10);
+    ofSetColor(0, 30);
     ofRect(0, 0, ofGetWidth(), ofGetHeight());
     // バッファーされたOSCメッセージを処理
     while(receiver.hasWaitingMessages()){
@@ -29,23 +29,24 @@ void ofApp::draw(){
         
         if(m.getAddress() == "/message"){
             // ノート番号取得
-            float noteNum = getValueFromKey(m.getArgAsString(0), "note: ", 2);
+            float noteNum = getValueFromKey(m.getArgAsString(0), "note:");
             // 定位(pan)取得
-            float pan = getValueFromKey(m.getArgAsString(0), "pan: ", 3);
+            float pan = getValueFromKey(m.getArgAsString(0), "pan:");
 
             // とりだしたノート番号を高さに四角を描く
-            int x = ofMap(pan, -1.0, 1.0, ofGetWidth() / 4.0, ofGetWidth() / 4.0 * 3.0);
-            int y = ofMap(noteNum, 60, 80, ofGetHeight(), 0);
+            int x = ofMap(pan, -1.0, 1.0, ofGetWidth()/4.0, ofGetWidth()/4.0*3.0);
+            int y = ofMap(noteNum, 60, 90, ofGetHeight(), 0);
             ofSetColor(255, 250);
             ofEnableBlendMode(OF_BLENDMODE_ADD);
             ofSetColor(ofColor::fromHsb(ofMap(y, 0, ofGetHeight(), 0, 255), 180, 255));
-            ofCircle(x, y, 200);
+            ofSetRectMode(OF_RECTMODE_CENTER);
+            ofRect(x, y, ofGetWidth()/3.0, ofGetHeight() / 20.0);
         }
     }
 }
 
 // メッセージのキーワードを指定して、その数値を取得する関数 (digitは桁数)
-float ofApp::getValueFromKey(string msg, string key, int digit){
+float ofApp::getValueFromKey(string msg, string key){
     // メッセージをパース、ノート番号だけをとりだし
     const size_t step = key.size();
     
@@ -60,11 +61,12 @@ float ofApp::getValueFromKey(string msg, string key, int digit){
         char c;
         msgStr = msg.substr(pos);
         string valueStr = "";
+        // , か } を検出するまで値を取得
         while (msgStr[current] != ',' && msgStr[current] != '}') {
             valueStr.insert(valueStr.size(), 1, msgStr[current]);
             current++;
         }
-        valueStr = valueStr.substr(key.size());
+        valueStr = valueStr.substr(key.size() + 1);
         cout << valueStr << endl;
         //msgStr = msg.substr(pos + step, digit);
         msgNum = atof(valueStr.c_str());
