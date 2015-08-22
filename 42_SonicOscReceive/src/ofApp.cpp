@@ -19,6 +19,7 @@ void ofApp::draw(){
         ofxOscMessage m;
         receiver.getNextMessage(&m);
         
+        // OSCメッセージが "/messeage" のものを取得
         if(m.getAddress() == "/message"){
             // メッセージを取得して表示
             string msg = m.getArgAsString(0);
