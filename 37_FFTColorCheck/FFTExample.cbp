@@ -6,7 +6,7 @@
 		<Option makefile="makefile" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="addons\;src\;addons\ofxFft\src\;addons\ofxFft\libs\fftw\include\;addons\ofxFft\libs\kiss\;" />
+		<Option virtualFolders="addons\;src\;addons\ofxFft\src\;addons\ofxFft\libs\fftw\include\;addons\ofxFft\libs\kiss\;addons\ofxGui\;addons\ofxGui\src\;" />
 		<Build>
 			<Target title="release">
 				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
@@ -71,6 +71,7 @@
 			<Add directory="../../../addons/ofxFft/src" />
 			<Add directory="../../../addons/ofxFft/libs/kiss" />
 			<Add directory="../../../addons/ofxFft/libs/fftw/include" />
+			<Add directory="../../../addons/ofxGui/src" />
 		</Compiler>
 		<Linker>
 			<Add library="..\..\..\libs\FreeImage\lib\win_cb\FreeImage.lib" />
@@ -169,6 +170,57 @@
 		</Unit>
 		<Unit filename="../../../addons/ofxFft/src/ofxProcessFFT.h">
 			<Option virtualFolder="addons/ofxFft/src" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxBaseGui.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxBaseGui.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxButton.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxButton.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxGui.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxGuiGroup.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxGuiGroup.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxLabel.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxLabel.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxPanel.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxPanel.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxSlider.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxSlider.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxSliderGroup.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxSliderGroup.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxToggle.cpp">
+			<Option virtualFolder="addons/ofxGui/src/" />
+		</Unit>
+		<Unit filename="../../../addons/ofxGui/src/ofxToggle.h">
+			<Option virtualFolder="addons/ofxGui/src/" />
 		</Unit>
 		<Unit filename="icon.rc">
 			<Option compilerVar="WINDRES" />
