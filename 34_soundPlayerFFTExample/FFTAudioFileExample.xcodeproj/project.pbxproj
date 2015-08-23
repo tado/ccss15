@@ -395,11 +395,6 @@
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
-					<key>HEADER_SEARCH_PATHS</key>
-					<array>
-						<string>$(OF_CORE_HEADERS)</string>
-						<string>src</string>
-					</array>
 					<key>ARCHS</key>
 					<string>$(NATIVE_ARCH)</string>
 					<key>CONFIGURATION_BUILD_DIR</key>
@@ -454,11 +449,6 @@
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
-					<key>HEADER_SEARCH_PATHS</key>
-					<array>
-						<string>$(OF_CORE_HEADERS)</string>
-						<string>src</string>
-					</array>
 					<key>ARCHS</key>
 					<string>$(NATIVE_ARCH)</string>
 					<key>CONFIGURATION_BUILD_DIR</key>
@@ -571,7 +561,7 @@
 				<key>isa</key>
 				<string>PBXNativeTarget</string>
 				<key>name</key>
-				<string>soundPlayerFFTExample</string>
+				<string>FFTAudioFileExample</string>
 				<key>productName</key>
 				<string>myOFApp</string>
 				<key>productReference</key>
@@ -588,7 +578,7 @@
 				<key>isa</key>
 				<string>PBXFileReference</string>
 				<key>path</key>
-				<string>soundPlayerFFTExampleDebug.app</string>
+				<string>FFTAudioFileExampleDebug.app</string>
 				<key>sourceTree</key>
 				<string>BUILT_PRODUCTS_DIR</string>
 			</dict>
